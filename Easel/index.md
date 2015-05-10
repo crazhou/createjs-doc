@@ -26,7 +26,7 @@ EaseJS 为复杂的图形应该和交互 ，提供了直接的解决方案
 ##小例子
 这个小例子，演示了怎么在舞台上创建一个形状和给他定位 
 ```js
-stage = new createjs.Stage('demoCanvas');`
+stage = new createjs.Stage('demoCanvas');
 
 circle = new createjs.Shape();
 circle.graphics.beginFill('red').drawCircle(0, 0, 40);
@@ -36,3 +36,41 @@ stage.addChild(circle);
 stage.update();
 
 ```
+##小例子二
+一个简单的用户交互
+```js
+displayObject.addEventListener('click', handleClick);
+function handleClick(e) {
+  // 点击事件
+}
+
+displayObject.addEventListener('mousedown', handlePress)
+function handlePress(e) {
+  e.addEventListener('mousemove', handleMove);
+}
+
+function handleMove(e) {
+  
+}
+```
+
+##小例子三
+这个例子移动了之前例子中创建的一个形状
+```js
+// 在下一桢更新舞台
+createjs.Ticker.addEventListener('tick', handleTick);
+
+function handleTick() {
+   //圆将会右移十个单位
+      circle.x += 10;
+      if (circle.x > stage.canvas.width) { circle.x = 0; }
+      stage.update();
+  }
+```
+
+##其它的特性
+EaselJS 还有一些内置的支持哦!
+
+- canvas 的阴影和合并操作
+- Ticker 一个全局的心跳器
+- Filters 过滤器 有ColorMatrixFilter, AlphaMaskFilter, AlphaMapFilter
