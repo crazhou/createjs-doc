@@ -52,8 +52,8 @@ function handlePress(e) {
 function handleMove(e) {
   
 }
-```
 
+```
 ##小例子三
 这个例子移动了之前例子中创建的一个形状
 ```js
@@ -77,4 +77,4 @@ EaselJS 还有一些内置的支持哦!
 － SpriteSheetUtils 和 SpriteSheetBuilder 可以在运行时管理 SpriteSheet 相关的功能
 
 ##浏览器支持
-在支持canvas的浏览器都支持 EaselJS (http://caniuse.com/canvas),不同的平台下浏览的性能不太一致，Android 由于缺少Canvas 的硬件支持，平均来讲比大多数的浏览器更慢
+在支持canvas的浏览器都支持 EaselJS ( http://caniuse.com/canvas ),不同的平台下浏览的性能不太一致，Android 由于缺少Canvas 的硬件支持，平均来讲比大多数的浏览器更慢
